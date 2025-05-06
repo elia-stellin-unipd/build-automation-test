@@ -1,3 +1,3 @@
 # build-automation-test
 
-edit (feature)
+![Java CI with Maven](https://github.com/elia-stellin-unipd/build-automation-test/actions/workflows/main.yml)
