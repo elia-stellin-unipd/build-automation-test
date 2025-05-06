@@ -1,4 +1,3 @@
 # build-automation-test
 
-![Java CI with Maven](https://github.com/elia-stellin-unipd/build-automation-test/actions/workflows/main.yml)
-
+[![Java CI with Maven](https://github.com/elia-stellin-unipd/build-automation-test/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/elia-stellin-unipd/build-automation-test/actions/workflows/main.yml)
