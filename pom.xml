@@ -5,11 +5,11 @@
 
   <groupId>it.unipd.mtss</groupId>
   <artifactId>roman-number</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
 
   <name>roman-number</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+
+  <url>mtss.unipd.it</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,19 +34,13 @@
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
     </dependency>
+
     <!-- Optionally: parameterized tests support -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
     </dependency>
-  
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>3.13.0</version>
-    </dependency>
-
   </dependencies>
 
   <build>
@@ -57,6 +51,7 @@
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.4.0</version>
         </plugin>
+
         <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
@@ -82,6 +77,7 @@
           <artifactId>maven-deploy-plugin</artifactId>
           <version>3.1.2</version>
         </plugin>
+
         <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
@@ -95,6 +91,8 @@
     </pluginManagement>
 
     <plugins>
+      
+      <!-- checkstyle: chiamato nella fase package, fa fallire la build se non rispettato -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
@@ -104,17 +102,18 @@
           <failsOnError>true</failsOnError>
           <configLocation>checkstyle.xml</configLocation>
           <consoleOutput>true</consoleOutput>
-        </configuration>
+          <includeTestSourceDirectory>true</includeTestSourceDirectory>
+         </configuration>
 
+        <!-- mvn package: include anche checkstyle -->
         <executions>
           <execution>
-          <phase>verify</phase>
+          <phase>package</phase>
           <goals>
             <goal>checkstyle</goal>
           </goals>
           </execution>
         </executions>
-
       </plugin>
     </plugins>
   </build>
