@@ -160,6 +160,17 @@
         </executions>
       </plugin>
     
+      <!-- coveralls plugin for code coverage badge -->
+      <plugin>
+        <groupId>com.github.hazendaz.maven</groupId>
+        <artifactId>coveralls-maven-plugin</artifactId>
+        <version>4.7.0</version>
+        <configuration>
+          <repoToken></repoToken>
+        </configuration>
+    </plugin>
+
+
     </plugins>
   </build>
 </project>

@@ -10,8 +10,8 @@ import org.junit.jupiter.api.Test;
 
 public class RomanPrinterTest {
 
-    // @Test
-    // public void test() {
-    //     assertTrue(new RomanPrinter().two() == 2);
-    // }
+    @Test
+    public void test() {
+        assertTrue(new RomanPrinter().two() == 2);
+    }
 }
